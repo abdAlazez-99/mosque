@@ -181,7 +181,7 @@
 }
 
 .m-block-5 {
-  margin-block: 5;
+  margin-block: 5px;
 }
 .m-block {
   margin-block: var(--px-x);
@@ -285,7 +285,7 @@
   background-color: var(--c-light);
 }
 .bg-dark {
-  background-color: var(--bs-dark);
+  background-color: var(--c-dark);
 }
 /* end background */
 

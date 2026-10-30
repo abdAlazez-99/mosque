@@ -1,5 +1,6 @@
 @layer reset, framework;
 @import "framework.css" layer(framework);
+@import "header-footer.css";
 
 @font-face {
   font-family: "main-font";
@@ -62,104 +63,6 @@ body {
 }
 
 /* end global */
-
-/* header */
-header {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  h2 {
-    font-size: clamp(1.375rem, calc(0.966rem + 2.045vw), 2.5rem);
-    span {
-      margin-left: -7px;
-    }
-  }
-  .active {
-    color: var(--c-primary);
-  }
-}
-
-header .burger input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-header .links label {
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
-  ul {
-    right: -30px;
-    top: 25px;
-    li {
-      transition: background-color var(--duration);
-      &:hover {
-        background-color: var(--border-color);
-      }
-    }
-  }
-
-  &:has(input[type="checkbox"]:checked) ul {
-    display: block;
-    color: var(--c-dark);
-  }
-
-  &:after {
-    content: "\f107";
-    font-weight: 900;
-    font-family: var(--fa-family-classic);
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
-@media screen and (width < 992px) {
-  header .btn-square {
-    display: none;
-  }
-}
-
-@media screen and (width < 850px) {
-  .links {
-    display: none;
-  }
-  header label.burger {
-    ::after {
-      content: "\f0c9";
-      font-weight: 900;
-      font-family: var(--fa-family-classic);
-      border: 2px solid var(--c-primary);
-      padding: var(--px-x) var(--px-2x);
-      background-color: var(--c-secondary);
-      color: var(--c-primary);
-      font-size: var(--px-2x);
-      cursor: pointer;
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    &:has(input[type="checkbox"]:checked) + ul.links {
-      display: flex;
-      position: absolute;
-      background: var(--c-white);
-      top: 80px;
-      right: 0;
-      width: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: var(--px-x) var(--px-25);
-    }
-  }
-}
-
-/* end header */
 
 /* landing */
 .landing {
