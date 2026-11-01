@@ -66,7 +66,7 @@ body {
 
 /* landing */
 .landing {
-  height: calc(100dvh - 80px);
+  height: calc(100dvh - 95px);
   background: url("../img/hero.jpg") center / cover;
 
   .container {
@@ -78,9 +78,65 @@ body {
       max-width: 600px;
       padding: 20px;
       h1 {
-        font-size: clamp(2.500rem, calc(1.818rem + 3.409vw), 4.375rem);
+        font-size: clamp(2.5rem, calc(1.818rem + 3.409vw), 4.375rem);
       }
     }
   }
 }
 /* end landing */
+
+/* about */
+.about figure {
+  max-width: 550px;
+  flex-grow: 1;
+  grid-template-areas:
+    "first second"
+    "first third";
+  grid-template-rows: repeat(2, 1fr);
+  img:first-child {
+    grid-area: first;
+    height: 100%;
+  }
+  img:nth-child(2) {
+    grid-area: second;
+  }
+  img:last-child {
+    grid-area: third;
+  }
+}
+
+.about .text {
+  max-width: 550px;
+}
+
+.about .raised {
+  background-color: #f8f9fa;
+  .img {
+    img {
+      width: 100px;
+    }
+  }
+}
+
+.about .check {
+  li {
+    width: 40%;
+    &::before {
+      content: "\f00c";
+      position: absolute;
+      font-weight: 900;
+      font-family: var(--fa-family-classic);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: var(--c-primary);
+    }
+  }
+}
+
+@media (width < 767px) {
+  .about :where(.raised, .about-our) {
+  flex-direction: column;
+}
+}
+/* end about */

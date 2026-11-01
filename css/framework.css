@@ -10,6 +10,10 @@
   --px-6x: 3.75rem;
 }
 
+p {
+  line-height: 1.6;
+}
+
 /* layout */
 .none {
   display: none;
@@ -183,7 +187,7 @@
 .m-block-5 {
   margin-block: 5px;
 }
-.m-block {
+.m-block-10 {
   margin-block: var(--px-x);
 }
 .m-block-20 {
@@ -302,6 +306,9 @@
 .c-white {
   color: var(--c-white);
 }
+.c-grey {
+  color: var(--c-grey);
+}
 .c-light {
   color: var(--c-light);
 }
@@ -395,8 +402,8 @@
   transition:
     color var(--duration),
     background-color var(--duration);
-    display: block;
-    width: fit-content;
+  display: block;
+  width: fit-content;
   &:hover {
     background-color: var(--c-dark);
     color: var(--c-primary);
