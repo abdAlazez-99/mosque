@@ -88,6 +88,12 @@ p {
 .p-20 {
   padding: var(--px-2x);
 }
+.p-30 {
+  padding: var(--px-3x);
+}
+.p-40 {
+  padding: var(--px-4x);
+}
 
 .p-block-5 {
   padding-block: 5px;

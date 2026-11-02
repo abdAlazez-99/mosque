@@ -136,7 +136,46 @@ body {
 
 @media (width < 767px) {
   .about :where(.raised, .about-our) {
-  flex-direction: column;
-}
+    flex-direction: column;
+  }
 }
 /* end about */
+/* message */
+.message {
+  p {
+    font-size: clamp(1.563rem, 0.625rem + 2.499vw, 2.5rem);
+  }
+  .btn {
+    width: 200px;
+    background-color: var(--c-white);
+    &:hover {
+      background-color: var(--c-dark);
+    }
+  }
+}
+
+@media (width < 992px) {
+  .message .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* end message */
+.title h2 {
+  font-size: clamp(2.5rem, 1.25rem + 3.333vw, 3.75rem);
+}
+/* activity */
+.activity .container {
+  article {
+    box-shadow: var(--card-shadow);
+    transition: background-color var(--duration);
+    &:hover {
+      background-color: var(--c-primary);
+      a {
+        background-color: #fff;
+      }
+    }
+  }
+}
+/* end activity */
