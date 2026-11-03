@@ -179,3 +179,54 @@ body {
   }
 }
 /* end activity */
+/* events */
+.events h2 {
+  font-size: clamp(2rem, 1.25rem + 3.333vw, 3.5rem);
+  width: min(95vw, 1200px);
+  margin: 0 auto var(--px-2x);
+}
+
+.events article {
+  grid-template-columns: auto 1.5fr 1fr;
+  grid-template-areas:
+    "col-1 col-2 col-3"
+    ". col-2 col-3";
+    align-content: flex-start;
+  .col-1 {
+    grid-area: col-1;
+    border-bottom: 1px solid;
+  }
+  .col-2 {
+    grid-area: col-2;
+    border-left: 1px solid;
+  }
+  .col-3 {
+    grid-area: col-3;
+    overflow: hidden;
+    img {
+      transition: scale var(--duration);
+    }
+  }
+  &:hover .col-3 img {
+    scale: 1.2;
+  }
+}
+
+@media (width < 992px) {
+  .events article {
+    align-content: center;
+    grid-template-areas:
+      "col-1 col-2 col-2"
+      ". col-2 col-2"
+      "col-3 col-3 col-3";
+    .col-3 {
+      margin-block: 20px;
+    }
+    .col-2 p {
+      font-size: 14px;
+      margin-inline: 0;
+      line-height: 1.6;
+    }
+  }
+}
+/* end events */
