@@ -251,3 +251,44 @@ body {
   }
 }
 /* end sermons */
+/* blog */
+.blog h2 {
+  font-size: clamp(2rem, 1.25rem + 3.333vw, 3.5rem);
+  width: min(95vw, 1200px);
+  margin-inline: auto;
+}
+
+.blog figure {
+  img {
+    width: 100%;
+    transition: scale var(--duration);
+    &:hover {
+      scale: 1.1;
+    }
+  }
+  &:after {
+    content: "01 Jan 2045";
+    color: var(--c-light);
+    background-color: var(--c-primary);
+    position: absolute;
+    width: fit-content;
+    padding: 10px 20px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.blog article {
+  flex-basis: 370px;
+  box-shadow: var(--card-shadow);
+  p {
+    line-height: 1.6;
+  }
+  .info :where(span, i) {
+    transition: color var(--duration);
+    &:hover {
+      color: var(--c-primary);
+    }
+  }
+}
