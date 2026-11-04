@@ -191,7 +191,7 @@ body {
   grid-template-areas:
     "col-1 col-2 col-3"
     ". col-2 col-3";
-    align-content: flex-start;
+  align-content: flex-start;
   .col-1 {
     grid-area: col-1;
     border-bottom: 1px solid;
@@ -230,3 +230,24 @@ body {
   }
 }
 /* end events */
+/* sermons */
+.sermons article {
+  box-shadow: var(--card-shadow);
+  flex-basis: 370px;
+  .stats :where(ul li, span) {
+    transition: color var(--duration);
+    &:hover {
+      color: var(--c-primary);
+    }
+  }
+  figure {
+    padding-bottom: 0;
+    img {
+      transition: scale var(--duration);
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+}
+/* end sermons */
