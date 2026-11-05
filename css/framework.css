@@ -360,6 +360,9 @@ p {
 .fs-25 {
   font-size: var(--px-25);
 }
+.fs-30 {
+  font-size: var(--px-3x);
+}
 /* end text & fonts */
 /* pointer */
 .pointer {
