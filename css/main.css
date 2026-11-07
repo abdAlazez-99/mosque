@@ -346,3 +346,47 @@ body {
   }
 }
 /* end out team */
+/* testimonial */
+.testimonial .title {
+  max-width: 500px;
+  margin: 0 auto var(--px-3x);
+}
+.testimonial .arrow {
+  width: 50px;
+  height: 50px;
+}
+
+.testimonial .slider {
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  flex-basis: 90%;
+
+  article {
+    scroll-snap-align: center;
+    background-color: var(--border-color);
+    flex-basis: 350px;
+    flex-shrink: 0;
+    .info {
+      img {
+        width: 100px;
+      }
+      &::after {
+        content: "\f10d";
+        font-family: var(--fa-family-classic);
+        font-weight: 900;
+        background-color: var(--c-primary);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+/* end testimonial */
