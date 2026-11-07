@@ -200,6 +200,9 @@ p {
 .m-block-10 {
   margin-block: var(--px-x);
 }
+.m-block-15 {
+  margin-block: var(--px-15);
+}
 .m-block-20 {
   margin-block: var(--px-2x);
 }
